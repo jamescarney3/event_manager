@@ -1,0 +1,18 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Hourly Signups Report</title>
+</head>
+<body>
+  <table>
+    <tr><th>Hour</th><th>Signups</th></tr>
+    <% hours = (0..23).to_a %>
+    <% hours.each do |hour| %>
+      <tr>
+        <td><%= "#{hour}:00:00 - " %></td>
+        <td><%= "#{signup_hours[hour]}" %></td>
+      </tr>
+    <% end %>
+  </table>
+</body>
+</html>
